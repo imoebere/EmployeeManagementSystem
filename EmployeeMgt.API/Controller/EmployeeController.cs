@@ -49,5 +49,24 @@ namespace EmployeeMgt.API.Controller
 			
 		}
 
+		[HttpPost]
+		public async Task<ActionResult<Employee>> CreateEmployee(Employee employee)
+		{
+			try
+			{
+				if(employee == null)
+				{
+					return BadRequest("Employee Fields should not be null");
+				}
+				var createdEmployee = await _employeeRepository.AddEmployeeAsync(employee);
+				return CreatedAtAction(nameof(GetEmployeeById), new { id = createdEmployee.EmployeeId }, createdEmployee);
+			}
+			catch (Exception)
+			{
+				return StatusCode(StatusCodes.Status500InternalServerError,
+											"Error retreiving data from the database");
+			}
+		}
+
     }
 }
