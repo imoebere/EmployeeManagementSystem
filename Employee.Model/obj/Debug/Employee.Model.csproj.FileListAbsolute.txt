@@ -1,0 +1,6 @@
+C:\Users\Decagon\source\repos\ASP Project\EmployeeManagement\Employee.Model\bin\Debug\Employee.Model.dll
+C:\Users\Decagon\source\repos\ASP Project\EmployeeManagement\Employee.Model\bin\Debug\Employee.Model.pdb
+C:\Users\Decagon\source\repos\ASP Project\EmployeeManagement\Employee.Model\obj\Debug\Employee.Model.csproj.AssemblyReference.cache
+C:\Users\Decagon\source\repos\ASP Project\EmployeeManagement\Employee.Model\obj\Debug\Employee.Model.csproj.CoreCompileInputs.cache
+C:\Users\Decagon\source\repos\ASP Project\EmployeeManagement\Employee.Model\obj\Debug\Employee.Model.dll
+C:\Users\Decagon\source\repos\ASP Project\EmployeeManagement\Employee.Model\obj\Debug\Employee.Model.pdb
