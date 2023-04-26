@@ -23,7 +23,6 @@ namespace EmployeeMgt.API.Controller
 			}
 			catch (Exception)
 			{
-
 				return StatusCode(StatusCodes.Status500InternalServerError,
 				"Error retreiving data from the database");
 			}
@@ -36,7 +35,7 @@ namespace EmployeeMgt.API.Controller
 			try
 			{
 				var result = await _employeeRepository.GetEmployeeByIdAsync(id);
-				if(result == null)
+				if (result == null)
 					return NotFound("Employee not found");
 
 				return Ok(result);
@@ -46,7 +45,7 @@ namespace EmployeeMgt.API.Controller
 				return StatusCode(StatusCodes.Status500InternalServerError,
 							"Error retreiving data from the database");
 			}
-			
+
 		}
 
 		[HttpPost("Create")]
@@ -54,12 +53,12 @@ namespace EmployeeMgt.API.Controller
 		{
 			try
 			{
-				if(employee == null)
+				if (employee == null)
 				{
 					return BadRequest("Employee Fields should not be null");
 				}
 				var existingEmployee = _employeeRepository.GetEmployeeByEmailAsync(employee.Email);
-				if(existingEmployee != null)
+				if (existingEmployee != null)
 				{
 					ModelState.AddModelError("Email", "Email already exist");
 					return BadRequest(ModelState);
@@ -75,15 +74,15 @@ namespace EmployeeMgt.API.Controller
 		}
 
 		[HttpPut("{id:int}")]
-		public async Task<ActionResult<Employee>> UpdateEmployee(int id,  Employee employee)
+		public async Task<ActionResult<Employee>> UpdateEmployee(int id, Employee employee)
 		{
 			try
 			{
-				if(id != employee.EmployeeId)
+				if (id != employee.EmployeeId)
 					return BadRequest("Employee ID mismatch");
 
 				var employeeToUpdate = await _employeeRepository.GetEmployeeByIdAsync(id);
-				if(employeeToUpdate == null)
+				if (employeeToUpdate == null)
 					return NotFound($"Employee with id = {id} was not found");
 
 				return await _employeeRepository.UpdateEmployeeAsync(employee);
@@ -96,5 +95,40 @@ namespace EmployeeMgt.API.Controller
 			}
 		}
 
+		[HttpDelete("{id:int}")]
+		public async Task<ActionResult<Employee>> DeleteEmployee(int id)
+		{
+			try
+			{
+				var employeeToDelete = await _employeeRepository.GetEmployeeByIdAsync(id);
+				if (employeeToDelete == null)
+					return NotFound($"Employee with Id = {id} not found");
+
+				return await _employeeRepository.DeleteEmployeeAsync(id);
+			}
+			catch (Exception)
+			{
+				return StatusCode(StatusCodes.Status500InternalServerError,
+															"Error Deleting data");
+			}
+		}
+
+		[HttpGet("{Search}")]
+		public async Task<ActionResult<IEnumerable<Employee>>> SearchEmployee(string name, Gender? gender)
+		{
+			try
+			{
+				var result = await _employeeRepository.SearchEmployeeAsync(name, gender);
+				if(result.Any())
+					return Ok(result);
+
+				return NotFound("Not Found");
+			}
+			catch (Exception)
+			{
+				return StatusCode(StatusCodes.Status500InternalServerError,
+								"Error retreiving data from the database");
+			}
+		}
     }
 }

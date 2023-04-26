@@ -1,4 +1,5 @@
 ﻿using EmployeeMgt.Model;
+using System.Threading.Tasks;
 
 namespace EmployeeMgt.API.Repository.Interface
 {
@@ -9,6 +10,7 @@ namespace EmployeeMgt.API.Repository.Interface
 		Task<Employee?> GetEmployeeByEmailAsync(string email);
 		Task<Employee> AddEmployeeAsync(Employee employee);
 		Task<Employee> UpdateEmployeeAsync(Employee employee);
-		void DeleteEmployeeAsync(int id);
+		Task<Employee> DeleteEmployeeAsync(int id);
+		Task<IEnumerable<Employee>> SearchEmployeeAsync(string name, Gender? gender);
 	}
 }

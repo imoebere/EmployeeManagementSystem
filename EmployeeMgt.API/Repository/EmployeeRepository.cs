@@ -27,7 +27,7 @@ namespace EmployeeMgt.API.Repository
 			return null;
 		}
 
-		public async void DeleteEmployeeAsync(int id)
+		public async Task<Employee> DeleteEmployeeAsync(int id)
 		{
 			var result = await _context.Employees
 				.FirstOrDefaultAsync(e => e.EmployeeId == id);
@@ -35,7 +35,9 @@ namespace EmployeeMgt.API.Repository
 			{
 				_context.Employees.Remove(result);
 				await _context.SaveChangesAsync();
+				return result;
 			}
+			return null;
 		}
 
 		public async Task<Employee?> GetEmployeeByIdAsync(int id)
@@ -70,5 +72,19 @@ namespace EmployeeMgt.API.Repository
 			}
 			return null;
 		}
+
+		public async Task<IEnumerable<Employee>> SearchEmployeeAsync(string name, Gender? gender)
+		{
+			IQueryable<Employee> query = _context.Employees;
+			if (!string.IsNullOrEmpty(name))
+				query = query.Where(e => e.FirstName.Contains(name)
+				|| e.LastName.Contains(name) || e.Email.Contains(name) 
+					);
+
+			if(gender != null)
+				query = query.Where(e => e.Gender == gender);
+
+			return await query.ToListAsync();
+		} 
 	}
 }
