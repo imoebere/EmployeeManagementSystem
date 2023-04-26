@@ -1,15 +1,18 @@
 ﻿using EmployeeMgt.API.Data;
 using EmployeeMgt.API.Repository.Interface;
 using EmployeeMgt.Model;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace EmployeeMgt.API.Repository
 {
 	public class EmployeeRepository : IEmployeeRepository
 	{
 		private readonly AppDbContext _context;
-		public EmployeeRepository(AppDbContext context) 
-		{ 
+		public EmployeeRepository(AppDbContext context)
+		{
 			_context = context;
 		}
 
@@ -38,6 +41,10 @@ namespace EmployeeMgt.API.Repository
 		public async Task<Employee?> GetEmployeeByIdAsync(int id)
 		{
 			return await _context.Employees.FirstOrDefaultAsync(x => x.EmployeeId == id);
+		}
+		public async Task<Employee?> GetEmployeeByEmailAsync(string email)
+		{
+			return await _context.Employees.FirstOrDefaultAsync(x => x.Email == email);
 		}
 
 		public async Task<IEnumerable<Employee>> GetEmployeesAsync()

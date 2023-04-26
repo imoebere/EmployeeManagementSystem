@@ -14,7 +14,7 @@ namespace EmployeeMgt.API.Controller
 			_employeeRepository = employeeRepository;
 		}
 
-		[HttpGet]
+		[HttpGet("All")]
 		public async Task<ActionResult> GetEmployees()
 		{
 			try
@@ -49,7 +49,7 @@ namespace EmployeeMgt.API.Controller
 			
 		}
 
-		[HttpPost]
+		[HttpPost("Create")]
 		public async Task<ActionResult<Employee>> CreateEmployee(Employee employee)
 		{
 			try
@@ -58,6 +58,12 @@ namespace EmployeeMgt.API.Controller
 				{
 					return BadRequest("Employee Fields should not be null");
 				}
+				var existingEmployee = _employeeRepository.GetEmployeeByEmailAsync(employee.Email);
+				if(existingEmployee != null)
+				{
+					ModelState.AddModelError("Email", "Email already exist");
+					return BadRequest(ModelState);
+				}
 				var createdEmployee = await _employeeRepository.AddEmployeeAsync(employee);
 				return CreatedAtAction(nameof(GetEmployeeById), new { id = createdEmployee.EmployeeId }, createdEmployee);
 			}
@@ -65,6 +71,28 @@ namespace EmployeeMgt.API.Controller
 			{
 				return StatusCode(StatusCodes.Status500InternalServerError,
 											"Error retreiving data from the database");
+			}
+		}
+
+		[HttpPut("{id:int}")]
+		public async Task<ActionResult<Employee>> UpdateEmployee(int id,  Employee employee)
+		{
+			try
+			{
+				if(id != employee.EmployeeId)
+					return BadRequest("Employee ID mismatch");
+
+				var employeeToUpdate = await _employeeRepository.GetEmployeeByIdAsync(id);
+				if(employeeToUpdate == null)
+					return NotFound($"Employee with id = {id} was not found");
+
+				return await _employeeRepository.UpdateEmployeeAsync(employee);
+			}
+			catch (Exception)
+			{
+
+				return StatusCode(StatusCodes.Status500InternalServerError,
+											"Error Updating data");
 			}
 		}
 
