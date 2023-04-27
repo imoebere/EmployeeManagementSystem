@@ -35,5 +35,7 @@ namespace EmployeeMgt.Model
 
         [Required]
         public string Photopath { get; set; } 
+
+        public Department Department { get; set; }
     }
 }

@@ -46,7 +46,9 @@ namespace EmployeeMgt.API.Repository
 		}
 		public async Task<Employee?> GetEmployeeByEmailAsync(string email)
 		{
-			return await _context.Employees.FirstOrDefaultAsync(x => x.Email == email);
+			return await _context.Employees
+				.Include(e => e.Department)
+				.FirstOrDefaultAsync(x => x.Email == email);
 		}
 
 		public async Task<IEnumerable<Employee>> GetEmployeesAsync()
