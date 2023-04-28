@@ -8,13 +8,23 @@ namespace EmployeeMgt.Pages
 	public class EmployeeListBase : ComponentBase
 	{
 		[Inject]
-		public IEmployeeService EmployeeService { get; set; } = null;
+		public IEmployeeService EmployeeService { get; set; }
+
+		public bool ShowFooter { get; set; } = true;
 		public IEnumerable<Employee>? Employees { get; set; }
 
 		protected override async  Task OnInitializedAsync()
 		{
-			//await Task.Run(LoadEmployee);
 			Employees = (await EmployeeService.GetEmployeesAsync()).ToList();
+		}
+		protected int SelectedEmployeeCount { get; set; } = 0;
+		protected void EmployeeSelectionChanged(bool isSelected)
+		{
+			if(isSelected)
+				SelectedEmployeeCount++;
+			else
+			SelectedEmployeeCount--;
+			
 		}
 	}
 }

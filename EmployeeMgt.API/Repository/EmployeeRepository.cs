@@ -47,7 +47,7 @@ namespace EmployeeMgt.API.Repository
 		public async Task<Employee?> GetEmployeeByEmailAsync(string email)
 		{
 			return await _context.Employees
-				.Include(e => e.Department)
+				.Include(e => e.Departments)
 				.FirstOrDefaultAsync(x => x.Email == email);
 		}
 

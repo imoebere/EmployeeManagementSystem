@@ -20,6 +20,18 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Decagon/source/repos/ASP Project/EmployeeManagement/EmployeeMgt/Pages/DataBinding.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGF0YUJpbmRpbmcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Decagon/source/repos/ASP Project/EmployeeManagement/EmployeeMgt/Pages/DisplayEmployee.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGlzcGxheUVtcGxveWVlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Decagon/source/repos/ASP Project/EmployeeManagement/EmployeeMgt/Pages/EditEmployee.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdEVtcGxveWVlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Decagon/source/repos/ASP Project/EmployeeManagement/EmployeeMgt/Pages/EmployeeDetails.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVEZXRhaWxzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
