@@ -15,7 +15,6 @@ namespace EmployeeMgt.Pages
 
 		public List<Department> Departments { get; set; } = new List<Department>();
 
-		public string DepartmentId { get ; set; }
 
 		[Parameter]
 		public string Id { get; set; }
@@ -24,7 +23,6 @@ namespace EmployeeMgt.Pages
 		{
 			Employee = await EmployeeService.GetEmployeeByIdAsync(int.Parse(Id));
 			Departments = (await DepartmentService.GetDepartmentsAsync()).ToList();
-			DepartmentId = Employee.DepartmentId.ToString();
 		}
 	}
 }

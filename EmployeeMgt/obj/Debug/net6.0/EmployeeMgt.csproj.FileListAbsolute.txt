@@ -33,3 +33,15 @@ C:\Users\Decagon\source\repos\ASP Project\EmployeeManagement\EmployeeMgt\obj\Deb
 C:\Users\Decagon\source\repos\ASP Project\EmployeeManagement\EmployeeMgt\obj\Debug\net6.0\EmployeeMgt.pdb
 C:\Users\Decagon\source\repos\ASP Project\EmployeeManagement\EmployeeMgt\obj\Debug\net6.0\EmployeeMgt.genruntimeconfig.cache
 C:\Users\Decagon\source\repos\ASP Project\EmployeeManagement\EmployeeMgt\obj\Debug\net6.0\ref\EmployeeMgt.dll
+C:\Users\Decagon\source\repos\ASP Project\EmployeeManagement\EmployeeMgt\bin\Debug\net6.0\ProgramTech.Components.staticwebassets.runtime.json
+C:\Users\Decagon\source\repos\ASP Project\EmployeeManagement\EmployeeMgt\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\Decagon\source\repos\ASP Project\EmployeeManagement\EmployeeMgt\bin\Debug\net6.0\Microsoft.AspNetCore.Components.dll
+C:\Users\Decagon\source\repos\ASP Project\EmployeeManagement\EmployeeMgt\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Forms.dll
+C:\Users\Decagon\source\repos\ASP Project\EmployeeManagement\EmployeeMgt\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Web.dll
+C:\Users\Decagon\source\repos\ASP Project\EmployeeManagement\EmployeeMgt\bin\Debug\net6.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\Decagon\source\repos\ASP Project\EmployeeManagement\EmployeeMgt\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Decagon\source\repos\ASP Project\EmployeeManagement\EmployeeMgt\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Decagon\source\repos\ASP Project\EmployeeManagement\EmployeeMgt\bin\Debug\net6.0\Microsoft.JSInterop.dll
+C:\Users\Decagon\source\repos\ASP Project\EmployeeManagement\EmployeeMgt\bin\Debug\net6.0\System.IO.Pipelines.dll
+C:\Users\Decagon\source\repos\ASP Project\EmployeeManagement\EmployeeMgt\bin\Debug\net6.0\ProgramTech.Components.dll
+C:\Users\Decagon\source\repos\ASP Project\EmployeeManagement\EmployeeMgt\bin\Debug\net6.0\ProgramTech.Components.pdb

@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "Hash": "3mXAGh3WiwGzy1EMx9kzURjwTfH28WeMTCCICIC+EtE=",
+  "Source": "ProgramTech.Components",
+  "BasePath": "_content/ProgramTech.Components",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ProgramTech.Components\\wwwroot",
+      "Source": "ProgramTech.Components",
+      "ContentRoot": "C:\\Users\\Decagon\\source\\repos\\ASP Project\\EmployeeManagement\\ProgramTech.Components\\wwwroot\\",
+      "BasePath": "_content/ProgramTech.Components",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Decagon\\source\\repos\\ASP Project\\EmployeeManagement\\ProgramTech.Components\\obj\\Debug\\net6.0\\scopedcss\\bundle\\ProgramTech.Components.styles.css",
+      "SourceId": "ProgramTech.Components",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Decagon\\source\\repos\\ASP Project\\EmployeeManagement\\ProgramTech.Components\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "BasePath": "_content/ProgramTech.Components",
+      "RelativePath": "ProgramTech.Components.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Decagon\\source\\repos\\ASP Project\\EmployeeManagement\\ProgramTech.Components\\obj\\Debug\\net6.0\\scopedcss\\bundle\\ProgramTech.Components.styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\Decagon\\source\\repos\\ASP Project\\EmployeeManagement\\ProgramTech.Components\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ProgramTech.Components.bundle.scp.css",
+      "SourceId": "ProgramTech.Components",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Decagon\\source\\repos\\ASP Project\\EmployeeManagement\\ProgramTech.Components\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "BasePath": "_content/ProgramTech.Components",
+      "RelativePath": "ProgramTech.Components.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Decagon\\source\\repos\\ASP Project\\EmployeeManagement\\ProgramTech.Components\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ProgramTech.Components.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Decagon\\source\\repos\\ASP Project\\EmployeeManagement\\ProgramTech.Components\\wwwroot\\background.png",
+      "SourceId": "ProgramTech.Components",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Decagon\\source\\repos\\ASP Project\\EmployeeManagement\\ProgramTech.Components\\wwwroot\\",
+      "BasePath": "_content/ProgramTech.Components",
+      "RelativePath": "background.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\background.png"
+    },
+    {
+      "Identity": "C:\\Users\\Decagon\\source\\repos\\ASP Project\\EmployeeManagement\\ProgramTech.Components\\wwwroot\\exampleJsInterop.js",
+      "SourceId": "ProgramTech.Components",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Decagon\\source\\repos\\ASP Project\\EmployeeManagement\\ProgramTech.Components\\wwwroot\\",
+      "BasePath": "_content/ProgramTech.Components",
+      "RelativePath": "exampleJsInterop.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\exampleJsInterop.js"
+    }
+  ]
+}

@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Employee.Model\EmployeeMgt.Model.csproj" />
+    <ProjectReference Include="..\ProgramTech.Components\ProgramTech.Components.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,17 +1,36 @@
 {
   "Version": 1,
-  "Hash": "Rx6SIMbj50hdnl8XtAly2fWDSl+N2PTaLn5UK41vvhU=",
+  "Hash": "v7pVb5Su02xPJSPlPgc/GbSMK8xF49PVIrecxgqodoA=",
   "Source": "EmployeeMgt",
   "BasePath": "_content/EmployeeMgt",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\Decagon\\source\\repos\\ASP Project\\EmployeeManagement\\ProgramTech.Components\\ProgramTech.Components.csproj",
+      "Version": 2,
+      "Source": "ProgramTech.Components",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
   "DiscoveryPatterns": [
     {
       "Name": "EmployeeMgt\\wwwroot",
       "Source": "EmployeeMgt",
       "ContentRoot": "C:\\Users\\Decagon\\source\\repos\\ASP Project\\EmployeeManagement\\EmployeeMgt\\wwwroot\\",
       "BasePath": "_content/EmployeeMgt",
+      "Pattern": "**"
+    },
+    {
+      "Name": "ProgramTech.Components\\wwwroot",
+      "Source": "ProgramTech.Components",
+      "ContentRoot": "C:\\Users\\Decagon\\source\\repos\\ASP Project\\EmployeeManagement\\ProgramTech.Components\\wwwroot\\",
+      "BasePath": "_content/ProgramTech.Components",
       "Pattern": "**"
     }
   ],
@@ -338,6 +357,57 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Decagon\\source\\repos\\ASP Project\\EmployeeManagement\\ProgramTech.Components\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ProgramTech.Components.bundle.scp.css",
+      "SourceId": "ProgramTech.Components",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Decagon\\source\\repos\\ASP Project\\EmployeeManagement\\ProgramTech.Components\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "BasePath": "_content/ProgramTech.Components",
+      "RelativePath": "ProgramTech.Components.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Decagon\\source\\repos\\ASP Project\\EmployeeManagement\\ProgramTech.Components\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ProgramTech.Components.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Decagon\\source\\repos\\ASP Project\\EmployeeManagement\\ProgramTech.Components\\wwwroot\\background.png",
+      "SourceId": "ProgramTech.Components",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Decagon\\source\\repos\\ASP Project\\EmployeeManagement\\ProgramTech.Components\\wwwroot\\",
+      "BasePath": "_content/ProgramTech.Components",
+      "RelativePath": "background.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\background.png"
+    },
+    {
+      "Identity": "C:\\Users\\Decagon\\source\\repos\\ASP Project\\EmployeeManagement\\ProgramTech.Components\\wwwroot\\exampleJsInterop.js",
+      "SourceId": "ProgramTech.Components",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Decagon\\source\\repos\\ASP Project\\EmployeeManagement\\ProgramTech.Components\\wwwroot\\",
+      "BasePath": "_content/ProgramTech.Components",
+      "RelativePath": "exampleJsInterop.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\exampleJsInterop.js"
     }
   ]
 }
