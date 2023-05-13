@@ -1,3 +1,5 @@
+using AutoMapper;
+using EmployeeMgt.Model;
 using EmployeeMgt.Services;
 using EmployeeMgt.Services.Interface;
 using Microsoft.AspNetCore.Components;
@@ -16,6 +18,7 @@ builder.Services.AddHttpClient<IDepartmentServices, DepartmentServices>(client =
 {
 	client.BaseAddress = new Uri("https://localhost:7225/");
 });
+builder.Services.AddAutoMapper(typeof(EmployeeProfile));
 
 var app = builder.Build();
 

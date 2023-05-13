@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Department.cs" />
+    <Compile Include="EmailDomainValidator.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="Gender.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

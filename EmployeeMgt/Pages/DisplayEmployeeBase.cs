@@ -1,5 +1,5 @@
-﻿using EmployeeMgt.Model;
-using Microsoft.AspNetCore.Components;
+﻿using Microsoft.AspNetCore.Components;
+using EmployeeMgt.Model;
 
 namespace EmployeeMgt.Pages
 {

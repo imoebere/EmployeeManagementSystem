@@ -22,6 +22,7 @@ namespace EmployeeMgt.Model
 
         [Required]
         [EmailAddress]
+        [EmailDomainValidator]
         public string Email { get; set; }
 
         [Required]
@@ -31,10 +32,10 @@ namespace EmployeeMgt.Model
         public Gender Gender { get; set; }
 
         [Required]
-        public int DepartmentId { get; set; }
+        public int? DepartmentId { get; set; }
 
         [Required]
-        public string Photopath { get; set; } 
+        public string Photopath { get; set; }
 
         public Department Departments { get; set; }
     }

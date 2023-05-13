@@ -74,16 +74,14 @@ namespace EmployeeMgt.API.Controller
 		}
 
 		[HttpPut("{id:int}")]
-		public async Task<ActionResult<Employee>> UpdateEmployee(int id, Employee employee)
+		public async Task<ActionResult<Employee>> UpdateEmployee(Employee employee)
 		{
 			try
 			{
-				if (id != employee.EmployeeId)
-					return BadRequest("Employee ID mismatch");
 
-				var employeeToUpdate = await _employeeRepository.GetEmployeeByIdAsync(id);
+				var employeeToUpdate = await _employeeRepository.GetEmployeeByIdAsync(employee.EmployeeId);
 				if (employeeToUpdate == null)
-					return NotFound($"Employee with id = {id} was not found");
+					return NotFound($"Employee with id = {employee.EmployeeId} was not found");
 
 				return await _employeeRepository.UpdateEmployeeAsync(employee);
 			}

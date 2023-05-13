@@ -45,3 +45,6 @@ C:\Users\Decagon\source\repos\ASP Project\EmployeeManagement\EmployeeMgt\bin\Deb
 C:\Users\Decagon\source\repos\ASP Project\EmployeeManagement\EmployeeMgt\bin\Debug\net6.0\System.IO.Pipelines.dll
 C:\Users\Decagon\source\repos\ASP Project\EmployeeManagement\EmployeeMgt\bin\Debug\net6.0\ProgramTech.Components.dll
 C:\Users\Decagon\source\repos\ASP Project\EmployeeManagement\EmployeeMgt\bin\Debug\net6.0\ProgramTech.Components.pdb
+C:\Users\Decagon\source\repos\ASP Project\EmployeeManagement\EmployeeMgt\bin\Debug\net6.0\Microsoft.AspNetCore.Components.DataAnnotations.Validation.dll
+C:\Users\Decagon\source\repos\ASP Project\EmployeeManagement\EmployeeMgt\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\Decagon\source\repos\ASP Project\EmployeeManagement\EmployeeMgt\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

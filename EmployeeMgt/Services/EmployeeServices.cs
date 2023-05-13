@@ -1,6 +1,7 @@
 ﻿using EmployeeMgt.Model;
 using EmployeeMgt.Services.Interface;
 using System.Net.Http.Headers;
+using System.Net.Http.Json;
 
 namespace EmployeeMgt.Services
 {
@@ -21,6 +22,11 @@ namespace EmployeeMgt.Services
 		public async Task<IEnumerable<Employee>> GetEmployeesAsync()
 		{
 			return await _httpClient.GetFromJsonAsync<Employee[]>("Api/Employee/All");
+		}
+
+		public async Task<Employee> UpdatedEmployeeAsync(Employee updatedEmployee)
+		{
+			return await _httpClient.PutAsJsonAsync<EditEmployeeModel>($"Api/Employee/{updatedEmployee.EmployeeId}", updatedEmployee);
 		}
 	}
 }

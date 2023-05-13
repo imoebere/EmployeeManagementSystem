@@ -80,7 +80,7 @@ namespace EmployeeMgt.API.Repository
 			IQueryable<Employee> query = _context.Employees;
 			if (!string.IsNullOrEmpty(name))
 				query = query.Where(e => e.FirstName.Contains(name)
-				|| e.LastName.Contains(name) || e.Email.Contains(name) 
+				|| e.LastName.Contains(name) || e.Email.Contains(name)
 					);
 
 			if(gender != null)
