@@ -14,6 +14,13 @@ namespace EmployeeMgt.Services
 			_httpClient = httpClient;
 		}
 
+		public async Task<Employee> CreateEmployeeAsync(Employee newEmployee)
+		{
+			var url = $"Api/Employee/create";
+			var result = await _httpClient.PostAsJsonAsync<Employee>(url, newEmployee);
+			return await result.Content.ReadFromJsonAsync<Employee>();
+		}
+
 		public async Task<Employee> GetEmployeeByIdAsync(int id)
 		{
 			return await _httpClient.GetFromJsonAsync<Employee>($"Api/Employee/{id}");
@@ -21,12 +28,16 @@ namespace EmployeeMgt.Services
 
 		public async Task<IEnumerable<Employee>> GetEmployeesAsync()
 		{
-			return await _httpClient.GetFromJsonAsync<Employee[]>("Api/Employee/All");
+			var result =  await _httpClient.GetFromJsonAsync<Employee[]>("Api/Employee/All");
+			return result;
 		}
 
-		public async Task<Employee> UpdatedEmployeeAsync(Employee updatedEmployee)
+		public async Task<Employee> UpdateEmployeeAsync(Employee updatedEmployee)
 		{
-			return await _httpClient.PutAsJsonAsync<EditEmployeeModel>($"Api/Employee/{updatedEmployee.EmployeeId}", updatedEmployee);
+			var url = $"Api/Employee";
+			var result =  await _httpClient.PutAsJsonAsync<Employee>(url, updatedEmployee);
+			 //result.EnsureSuccessStatusCode();
+			return await result.Content.ReadFromJsonAsync<Employee>();
 		}
 	}
 }

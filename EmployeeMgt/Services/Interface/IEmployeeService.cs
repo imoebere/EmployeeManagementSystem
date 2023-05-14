@@ -6,7 +6,9 @@ namespace EmployeeMgt.Services.Interface
 	{
 		Task<IEnumerable<Employee>> GetEmployeesAsync();
 		Task<Employee> GetEmployeeByIdAsync(int id);
-		Task<Employee> UpdatedEmployeeAsync(Employee updatedEmployee);
+		Task<Employee> UpdateEmployeeAsync(Employee updatedEmployee);
+
+		Task<Employee> CreateEmployeeAsync(Employee newEmployee);
 
 	}
 }

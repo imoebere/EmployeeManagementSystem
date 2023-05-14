@@ -57,7 +57,7 @@ namespace EmployeeMgt.API.Controller
 				{
 					return BadRequest("Employee Fields should not be null");
 				}
-				var existingEmployee = _employeeRepository.GetEmployeeByEmailAsync(employee.Email);
+				var existingEmployee = await _employeeRepository.GetEmployeeByEmailAsync(employee.Email);
 				if (existingEmployee != null)
 				{
 					ModelState.AddModelError("Email", "Email already exist");
@@ -73,7 +73,7 @@ namespace EmployeeMgt.API.Controller
 			}
 		}
 
-		[HttpPut("{id:int}")]
+		[HttpPut]
 		public async Task<ActionResult<Employee>> UpdateEmployee(Employee employee)
 		{
 			try
